@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre formulário | HTML </title>
+
+    <style>
+        body{
+            background-color: #1a1a1a;
+            color: #fcfcfc;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Sobre formulários </h1>
+    </header>
+
+    <main>
+        <section>
+            <h2> O que são formulários? </h2>
+            <p> OS formulários são uma das mais importantes do nosso <abbr title="HyperText Markup Language"> HTML </abbr> semântico. Ele serve para: </p>
+
+            <ul>
+                <li>Entrada de dasos</li>
+                <li>Interação</li>
+                <li>Acessibilidade</li>
+                <li>Validação e envio de informações</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> Como trabalar com um form no HTML </h2>
+            <p> Para começarmos a trabalhar com um formulário dentro do HTML utilizamos o elemento de &lt; form &gt; . </p>
+
+            <p> Esse elemento, representa um formulário interativo. </p>
+
+            <h3> Criando a estrutura básica </h3>
+
+            <form action="">
+                <!-- Exemplo básico 
+                <input type="text">  <br>-->
+
+                <label for="nome">Nome</label><br>
+                <input type="text" id="nome" name="nome"><br>
+                
+                <label for="email"> Email </label><br>
+                <input type="email" name="email" id="email"><br>
+
+                <label for="password"> Senha </label><br>
+                <input type="password" name="password" id="password"><br>
+
+                <label for="date"> Data </label><br>
+                <input type="date" name="date" id="date"><br>
+
+                <label for="tel"> Telefone </label><br>
+                <input type="tel" name="tel" id="tel"><br>
+
+                <label>
+                    <input type="checkbox" name="" id="">
+                    Aceito os termos de uso do site
+                </label>
+
+                <button type="submit"> Enviar formulário </button>
+            </form>
+        </section>
+
+        <section>
+            <h2> Formulários agrupados </h2>
+            <p> Para criarmos formulários agrupados, utilizamos o elemento &lt; fieldset &gl; e &lt; legend &gl; . </p>
+
+            <form action="">
+                <fieldset>
+                    <legend> Informações Pessoais </legend>
+
+                    <label for="nome-cadastro"> Nome </label> <br>
+                    <input type="text" name="nome-cadastro" id="nome-cadastro" placeholder="Exemplo da Silva"> <br>
+
+                    <label for="email-cadastro"> Email </label>
+                    <input type="email" name="email-cadastro" id="email-cadastro" placeholder="exemplo@exemplo.com"> <br>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Endereço </legend>
+
+                    <label for="cep"> CEP </label>
+                    <input type="text" name="cep" id="cep" placeholder="00000-000" required>  <!-- required serve para tornar o campo obrigatório -->
+
+                    <label for="rua"> Rua </label>
+                    <input type="text" name="rua" id="rua" placeholder="Rua Ali">
+                </fieldset>
+            </form>
+
+            <button type="submit"> Enviar dados </button>
+        </section>
+    </main>
+</body>
+</html>

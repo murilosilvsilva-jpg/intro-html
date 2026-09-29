@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Imagens | HTML</title>
+</head>
+<body>
+    <h1>Trabalhando com imagens</h1>
+    <hr>
+
+    <p>Trabalhando com o elemento de &lt;img&gt;</p>
+    <img src="por-do-sol.jpg" alt="Lindo pôr do sol, com cores vibrantes com o céu cheio de nuvens" width="500">
+
+    <p>Entendendo os atributos: </p>
+    <ul>
+        <li><strong>src</strong>: Source/fonte: É o caminho onde a imagem está hospedada/armazenada. Pode ser um caminho local ou um link direto dda internet.</li>
+
+        <li><strong> alt </strong>: alt/alternative. É uma breve descrição da imagem. É crucial para <strong>Acessibilidade</strong> e como fallback.</li>
+    </ul>
+
+    <h2> Trabalhano com recursos externos </h2>
+    <p> Configurando imagens  </p>
+
+    <img src="https://images.unsplash.com/photo-1650937254058-d952a67a4f46?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9sbyUyMGRlJTIwY2Vub3VyYXxlbnwwfHwwfHx8MA%3D%3" alt="Delícioso Bolo de Cenoura com cobertura de Chocolate" width="300">
+
+    <h2> Outras abordagens </h2>
+    <h3> Elemento figure </h3>
+    <figure>
+        <img src="por-do-sol.jpg" alt="Lindo por do sol" width="500">
+
+        <figcaption> Pôr do solno Ceará - Foto: Murilo Silva </figcaption>
+    </figure>
+
+    <h3> Elemento picture </h3>
+    <p> Utilizamos o elemento &lt;picture&gt; serve para controlarmos qual arquivo será utilizado de acordo com determinadas condições. </p>
+
+    <picture>
+        <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1650937254058-d952a67a4f46?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9sbyUyMGRlJTIwY2Vub3VyYXxlbnwwfHwwfHx8MA%3D%3">
+
+        <source media="(min-width: 601px)" srcset="por-do-sol.jpg" width="800">
+
+        <!-- img como fallback(plano B) - Caso não seja possivel utilizar alguma imagem configurada no souce acima, o navegador entrega a imagem do img. -->
+        <img src="por-do-sol.jpg" alt="">
+
+    </picture>
+
+    <hr>
+    <h2> Sobre os tipos de imagens </h2>
+    <p> Você pode encontrar um acervo muito grande de tipos de imagens. A escolha da imagem certa pode elevar a perfomace do seu site. Veja a lista abaixo:</p>
+    <ul>
+        <li><strong>JPEG/JPG</strong>: Bom para fotografias, produtos fotografados, imagens com muitas cores e detalhes. Se você tentar otimizar demais, a perda de qualidade se torna visível.</li>
+        <li><strong> PNG </strong>: Suporta tranparência e é muito bom para imagens que precisam preservar certos detalhes, como por exemplo: logos, imagens que precisam de transparência e etc. </li>
+        <li><strong> WEBP </strong>: Formato recente desenvolvido com foco na web. Além de também suportar transparência, também consegue trabalhar com imagens em alta definição. Excelente escolha para fotografias, imagens de produtos, imagens com transparência e imagens gerais.  </li>
+        <li><strong>AVIF</strong>: É um formato mais recente e também muito eficiente. É excelente, para fotografias, imagens grandes, sites onde desempenho e economia de dados são extemamente importantes. </li>
+        <li><strong> AVIF </strong>: É um elemento vetorial, excelente para logos, icones, simbolos e etc. </li>
+    </ul>
+
+</body>
+</html>
